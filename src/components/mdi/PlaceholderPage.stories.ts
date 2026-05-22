@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import PlaceholderPage from './PlaceholderPage.vue'
+import PlaceholderPage from 'hdot-tmaster-front/components/mdi/PlaceholderPage.vue'
 
 const meta: Meta<typeof PlaceholderPage> = {
   title: 'MDI/PlaceholderPage',

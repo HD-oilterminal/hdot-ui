@@ -18,11 +18,11 @@ RealGrid.setDefault({
   },
   edit: {
     editable: false,
-    checkable: false,
+    checkable: true,
     commitByCell: true,
     commitWhenLeave: true,
-    columnEditableFirst: true,
-    movable: true,
+    columnEditableFirst: false,
+    movable: false,
   },
   rowIndicator: {
     visible: false,
@@ -31,7 +31,7 @@ RealGrid.setDefault({
     visible: false,
   },
   checkBar: {
-    visible: false,
+    visible: true,
   },
   header: {
     height: 30,
@@ -42,7 +42,7 @@ RealGrid.setDefault({
   display: {
     rowHeight: -1,
     minRowHeight: 28,
-    maxRowHeight: 50,
+    maxRowHeight: 26,
     rowResizable: true,
     eachRowResizable: true,
     selectionStyle: SelectionStyle.ROWS,

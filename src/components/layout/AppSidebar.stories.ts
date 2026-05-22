@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { useMenuStore } from '@/stores/menu'
-import AppSidebar from './AppSidebar.vue'
+import AppSidebar from 'hdot-tmaster-front/components/layout/AppSidebar.vue'
 
 const meta: Meta<typeof AppSidebar> = {
   title: 'Layout/AppSidebar',
@@ -48,7 +48,7 @@ const mockMenuLv2 = [
 
 export const Default: Story = {
   decorators: [
-    (_story) => ({
+    _story => ({
       setup() {
         const menuStore = useMenuStore()
         menuStore.menuLv1 = mockMenuLv1

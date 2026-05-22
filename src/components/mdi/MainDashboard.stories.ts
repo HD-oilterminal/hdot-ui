@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import MainDashboard from './MainDashboard.vue'
+import MainDashboard from 'hdot-tmaster-front/components/mdi/MainDashboard.vue'
 
 const meta: Meta<typeof MainDashboard> = {
   title: 'MDI/MainDashboard',
@@ -15,7 +15,7 @@ type Story = StoryObj<typeof MainDashboard>
 
 export const Default: Story = {
   decorators: [
-    (story) => ({
+    story => ({
       template: '<div style="height: 100vh;"><story /></div>',
     }),
   ],

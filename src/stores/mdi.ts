@@ -17,20 +17,20 @@ export const useMdiStore = defineStore('mdi', () => {
   }
 
   const closeTab = (id: string) => {
-    tabs.value = tabs.value.filter((t) => t.id !== id)
+    tabs.value = tabs.value.filter(t => t.id !== id)
     if (activeTabId.value === id) {
       activeTabId.value = tabs.value.at(-1)?.id ?? ''
     }
   }
 
   const openTab = (tab: MdiTab): boolean => {
-    const exists = tabs.value.some((t) => t.id === tab.id)
+    const exists = tabs.value.some(t => t.id === tab.id)
     if (!exists) tabs.value.push(tab)
     activeTabId.value = tab.id
     return !exists
   }
 
-  const isOpen = (id: string) => tabs.value.some((t) => t.id === id)
+  const isOpen = (id: string) => tabs.value.some(t => t.id === id)
 
   return { tabs, activeTabId, activate, closeTab, openTab, isOpen }
 })

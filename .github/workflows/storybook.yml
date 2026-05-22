@@ -20,6 +20,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          path: hd-oilterminal.github.io
+
+      - uses: actions/checkout@v4
+        with:
+          repository: HD-oilterminal/hdot-tmaster-front
+          ref: features/scaffolding
+          path: hdot-tmaster-front
+          token: ${{ secrets.GH_PAT }}
+
       - uses: pnpm/action-setup@v4
         with:
           version: 11
@@ -27,11 +37,19 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
+          cache-dependency-path: hd-oilterminal.github.io/pnpm-lock.yaml
+      - name: Stub .nuxt/tsconfig.json
+        run: mkdir -p hdot-tmaster-front/.nuxt && echo '{"compilerOptions":{}}' > hdot-tmaster-front/.nuxt/tsconfig.json
+
       - run: pnpm install --frozen-lockfile
+        working-directory: hd-oilterminal.github.io
       - run: pnpm build-storybook
+        working-directory: hd-oilterminal.github.io
+        env:
+          VITE_REALGRID_KEY: ${{ secrets.VITE_REALGRID_KEY }}
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: storybook-static/
+          path: hd-oilterminal.github.io/storybook-static/
 
   deploy:
     name: Deploy to GitHub Pages

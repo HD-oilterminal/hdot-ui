@@ -1,2 +1,5 @@
 allowBuilds:
+  '@parcel/watcher': true
   esbuild: true
+  vue-demi: true
+  hdot-tmaster-front: false

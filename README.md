@@ -102,7 +102,7 @@ decorators: [
     },
     template: '<story />',
   }),
-],
+]
 ```
 
 ---

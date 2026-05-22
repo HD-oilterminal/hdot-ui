@@ -7,7 +7,7 @@ export const useMenuStore = defineStore('menu', () => {
   const menuLv2 = ref<MenuLv2Item[]>([])
 
   const getSubMenus = (upperMenuId: string): MenuLv2Item[] =>
-    menuLv2.value.filter((m) => m.upper_menu_id === upperMenuId)
+    menuLv2.value.filter(m => m.upper_menu_id === upperMenuId)
 
   return { menuLv1, menuLv2, getSubMenus }
 })

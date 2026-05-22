@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import SearchInput from './SearchInput.vue'
+import SearchInput from 'hdot-tmaster-front/components/commons/SearchInput.vue'
 
 const meta: Meta<typeof SearchInput> = {
   title: 'Common/SearchInput',
@@ -16,21 +16,21 @@ type Story = StoryObj<typeof SearchInput>
 
 export const Default: Story = {
   args: {
-    placeholder: '그룹코드,코드명',
+    placeholder: '쓰시옵거나 찾으시거나',
     modelValue: '',
   },
 }
 
 export const WithValue: Story = {
   args: {
-    placeholder: '그룹코드,코드명',
+    placeholder: '쓰시옵거나 찾으시거나',
     modelValue: 'MNU01',
   },
 }
 
 export const CustomPlaceholder: Story = {
   args: {
-    placeholder: '선박명, 선박코드 검색',
+    placeholder: '쓰시옵거나 찾으시거나',
     modelValue: '',
   },
 }
