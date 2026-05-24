@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "storybook": "storybook dev --port 6006",
-    "build-storybook": "storybook build --disable-telemetry",
+    "dev": "storybook dev --port 6006",
+    "build": "storybook build --disable-telemetry",
     "lint": "eslint src --ext .ts,.vue",
     "format": "prettier --write \"src/**/*.{ts,vue,css}\" \".storybook/**/*.ts\""
   },
